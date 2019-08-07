@@ -1,0 +1,12 @@
+<h1>HERE ARE ALL THE SONGS</h1>
+
+<ul>
+    <% Artist.all.each do |artist| %>
+    <h3><a href= "artists/<%=artist.id%>"><%=artist.name%></a></h3>
+        <% artist.songs.each do |song| %>
+            <li>
+            <a href= "<%=song.url%>" target = "_blank"><%=song.name%></a>
+            </li>
+        <% end %>
+    <% end %>
+</ul>

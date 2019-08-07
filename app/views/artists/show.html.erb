@@ -1,0 +1,14 @@
+<h1><%="#{@artist.name.upcase}" %></h1>
+
+<h3>GENRE</h3>
+<p><%="#{@artist.genre}" %></p>
+
+<h3>SONGS</h3>
+<%@artist.songs.each do|song| %>
+    <%url_string = song.url%>
+    <p><a href= "<%=song.url%>" target = "_blank"><%=song.name%></a></p>
+<% end %>
+
+
+
+

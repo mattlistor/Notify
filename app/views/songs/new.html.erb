@@ -1,0 +1,25 @@
+<h1>ADD A SONG</h1>
+<br>
+<h3>Existing artist:</h3>
+<form method='post' action='/songs'>
+    <label>Song name: <input type='text' name='name' id='name' /></label>
+
+    <label>Artist: <select name = 'artist_id'>
+        <%Artist.all.each do |artist|%>
+            <option value="<%=artist.id %>"><%= artist.name %></option>
+        <% end %>
+    </select></label>
+    
+    <label>Youtube link: <input type='text' name='url' id='url' /></label>
+    <input type='submit' id='submit' />
+</form>
+
+<br>
+<h3>New artist:</h3>
+<form method='post' action='/songs'>
+    <label>Song name: <input type='text' name='name' id='name' /></label>
+    <label>Artist name: <input type='text' name='name' id='name' /></label>
+    <label>Youtube link: <input type='text' name='url' id='url' /></label>
+    <input type='submit' id='submit' />
+</form>
+
